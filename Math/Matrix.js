@@ -30,11 +30,15 @@ class Matrix {
     // }
 
     toStrings() {
+        function financial(_x) {
+            return Number.parseFloat(_x).toFixed(16);
+        }
+
         let e = [
-            "[" + this.m00 + ", " + this.m01 + ", " + this.m02 + ", " + this.m03 + "]",
-            "[" + this.m10 + ", " + this.m11 + ", " + this.m12 + ", " + this.m13 + "]",
-            "[" + this.m20 + ", " + this.m21 + ", " + this.m22 + ", " + this.m23 + "]",
-            "[" + this.m30 + ", " + this.m31 + ", " + this.m32 + ", " + this.m33 + "]"
+            "[" + financial(this.m00) + ", " + financial(this.m01) + ", " + financial(this.m02) + ", " + financial(this.m03) + "]",
+            "[" + financial(this.m10) + ", " + financial(this.m11) + ", " + financial(this.m12) + ", " + financial(this.m13) + "]",
+            "[" + financial(this.m20) + ", " + financial(this.m21) + ", " + financial(this.m22) + ", " + financial(this.m23) + "]",
+            "[" + financial(this.m30) + ", " + financial(this.m31) + ", " + financial(this.m32) + ", " + financial(this.m33) + "]"
         ];
         return e;
     }
