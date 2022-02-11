@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF8"/>
+    <title>View行列可視化</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="Math/Vector.js"></script>
+    <script src="Math/Matrix.js"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <h1>View行列を可視化するサイト</h1>
+
+    <div id="input-vector">
+      <h4>入力</h4>
+
+      <form>
+        <div id="eye">
+          <label> Eye
+            x<input type="number" name="eye-x" value="0">
+            , y<input type="number" name="eye-y" value="0">
+            , z<input type="number" name="eye-z" value="-1">
+          </label>
+        </div>
+
+        <label> Target 
+          x<input type="number" name="target-vec" value="0">
+          , y<input type="number" name="target-vec" value="0">
+          , z<input type="number" name="target-vec" value="0">
+        </label>
+
+        <div id="up">
+          <label>Up
+            x<input type="number" name="up-vec" value="0">
+            , y<input type="number" name="up-vec" value="1">
+            , z<input type="number" name="up-vec" value="0">
+          </label> 
+        </div>
+
+        <input id="calc-button" type="button" value="計算">
+      </form>
+    </div>
+
+    <div id="view-matrix">
+      <h4>計算結果</h4>
+      <div id="view-result"></div>
+    </div>
+  </body>
+</html>
